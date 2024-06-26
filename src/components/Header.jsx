@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
@@ -35,14 +35,14 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a href="#hero" className="block w-[12rem] xl:mr-8">
+        <Link to="/" className="block w-[12rem] xl:mr-8">
           <img
             src="/src/assets/logo.png"
             alt="RC Service Logo"
             width={190}
             height={40}
           />
-        </a>
+        </Link>
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
@@ -68,17 +68,6 @@ const Header = () => {
           </div>
           <HamburgerMenu />
         </nav>
-
-        <a
-          href="#signup"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-        >
-          Registrarse
-        </a>
-
-        <Button className="hidden lg:flex" href="#login">
-          Acceder
-        </Button>
 
         <Button
           className="ml-auto lg:hidden"

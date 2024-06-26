@@ -35,14 +35,6 @@ const WDPricing = () => {
         <div className="relative">
           <WDPricingList />
         </div>
-        <div className="flex justify-center mt-10">
-          <a
-            href="/pricing"
-            className="text-xs font-code font-bold tracking-wider uppercase border-b "
-          >
-            Ver más detalles
-          </a>
-        </div>
       </div>
     </Section>
   );

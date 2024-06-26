@@ -1,13 +1,14 @@
-import { pricing } from "../assets";
-import Section from "./Section";
+import { check } from "../assets";
+import { stPricing } from "../constants";
+import Button from "./Button";
 
 const STPricing = () => {
   return (
-    <Section className="flex gap-[1rem] max-lg:flex-wrap">
-      {pricing.map((item) => (
+    <div className="flex gap-[1rem] max-lg:flex-wrap">
+      {stPricing.map((item) => (
         <div
           key={item.id}
-          className="w-[19rem] max-lg:w-full h-full px-6 bg-n-8 border border-n-6 rounded-[2rem] lg:w-auto even:py-14 odd:py-8 odd:my-4 [&>h4]:first:text-color-2 [&>h4]:even:text-color-1 [&>h4]:last:text-color-3"
+          className="w-[19rem] max-lg:w-full h-full px-6 bg-n-8 border border-n-6 rounded-[2rem] lg:w-auto [&>h4]:first:text-color-2 [&>h4]:even:text-color-1 [&>h4]:last:text-color-3"
         >
           <h4 className="h4 mb-4">{item.title}</h4>
 
@@ -30,10 +31,11 @@ const STPricing = () => {
             className={`w-full mb-6 ${
               item.price ? "bg-white hover:bg-transparent" : ""
             }`}
-            href={item.price ? "/pricing" : "mailto:contacto@rcservices.com"}
+            href={item.price ? "/pricing" : "https://walink.co/276d5b"}
             white={!!item.price}
+            blank={!item.price ? true : false}
           >
-            {item.price ? "Elegir Plan" : "Contáctanos"}
+            {item.price ? "Elegir Plan" : "Contáctame"}
           </Button>
 
           <ul>
@@ -49,9 +51,8 @@ const STPricing = () => {
           </ul>
         </div>
       ))}
-    </Section>
+    </div>
   );
-};
 };
 
 export default STPricing;

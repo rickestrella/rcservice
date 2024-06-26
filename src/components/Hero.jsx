@@ -1,12 +1,12 @@
 import { ScrollParallax } from "react-just-parallax";
 import { heroBackground3, tech } from "../assets";
-import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { useRef } from "react";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -27,9 +27,12 @@ const Hero = () => {
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Calidad y eficiencia en cada servicio.
           </p>
-          <Button href="/pricing" className="white">
+          <Link
+            to="/about"
+            className="text-white font-code border border-white px-6 py-2 rounded-md hover:bg-slate-700/80"
+          >
             Saber más
-          </Button>
+          </Link>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">

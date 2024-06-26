@@ -3,6 +3,7 @@ import Section from "./Section";
 import { check, service1, service2, spotify } from "../assets";
 import { developerServices, technicalServicesIcons } from "../constants";
 import { PhotoChatMessage, Gradient, VideoBar } from "./design/Services";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -14,7 +15,10 @@ const Services = () => {
         />
 
         <div className="relative">
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
+          <Link
+            to="/web-development"
+            className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
+          >
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
               <img
                 src={service1}
@@ -41,16 +45,14 @@ const Services = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </Link>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
                 <img
                   src={spotify}
-                  className="h-full w-full px-7 py-[5rem]"
-                  height={250}
-                  width={250}
+                  className="h-full w-full px-7 py-[5rem] lg:w-2xl lg:h-2xl lg:py-[9rem] lg:px-[3rem]"
                   alt="Technician"
                 />
               </div>
@@ -64,7 +66,10 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <Link
+              to="/tech-support"
+              className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]"
+            >
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">Servicio Técnico</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
@@ -113,7 +118,7 @@ const Services = () => {
                   alt=""
                 />
               </div>
-            </div>
+            </Link>
           </div>
 
           <Gradient />
