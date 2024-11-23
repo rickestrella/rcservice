@@ -52,16 +52,16 @@ const ContactForm = () => {
             <div className="flex items-center">
               <i className="fas fa-envelope text-xl mr-2"></i>
               <a
-                href="mailto:rjestrelals95@gmail.com"
+                href="mailto:info@rcservice.tech"
                 className="text-lg font-medium text-neutral-300 hover:underline"
               >
-                rjestrellas95@gmail.com
+                info@rcservice.tech
               </a>
             </div>
 
             <div className="flex items-center gap-2">
               <a
-                href="https://www.facebook.com/example"
+                href="https://www.facebook.com/RCServices.tech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg font-medium "
@@ -69,7 +69,7 @@ const ContactForm = () => {
                 <img src={facebook} alt="facebook" />
               </a>
               <a
-                href="https://www.instagram.com/in/example"
+                href="www.instagram.com/rcservice.ec/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg font-medium "

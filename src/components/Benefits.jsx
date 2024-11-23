@@ -3,7 +3,14 @@ import Heading from "./Heading";
 import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
+import { Link } from "react-router-dom";
 // import ClipPath from "../assets/svg/ClipPath";
+
+function typeOfService(item) {
+  if (item === "web") return "/web-development";
+  if (item === "tech") return "/tech-support";
+  if (item === "contact") return "/contact";
+}
 
 const Benefits = () => {
   return (
@@ -14,9 +21,10 @@ const Benefits = () => {
           title="Crece de forma inteligente con RC Service"
         />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="flex flex-wrap gap-10 mb-10 justify-evenly">
           {benefits.map((item) => (
-            <div
+            <Link
+              to={typeOfService(item.serviceType)}
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
@@ -54,13 +62,14 @@ const Benefits = () => {
                       height={362}
                       alt={item.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   )}
                 </div>
               </div>
 
               {/* <ClipPath /> */}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

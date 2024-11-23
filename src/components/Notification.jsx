@@ -14,6 +14,7 @@ const Notification = ({ className, title }) => {
         height={62}
         alt="image"
         className="rounded-xl"
+        loading="lazy"
       />
 
       <div className="flex-1">

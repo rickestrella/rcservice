@@ -52,7 +52,13 @@ const Hero = () => {
                   <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
                     {heroIcons.map((icon, index) => (
                       <li className="p-5" key={index}>
-                        <img src={icon} width={24} height={25} alt={icon} />
+                        <img
+                          src={icon}
+                          width={24}
+                          height={25}
+                          alt={icon}
+                          loading="lazy"
+                        />
                       </li>
                     ))}
                   </ul>
@@ -76,13 +82,14 @@ const Hero = () => {
               width={1440}
               height={1800}
               alt="hero"
+              loading="lazy"
             />
           </div>
 
           <BackgroundCircles />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
+        <CompanyLogos className="relative z-10 mt-14 lg:mt-20" />
       </div>
       <BottomLine />
     </Section>

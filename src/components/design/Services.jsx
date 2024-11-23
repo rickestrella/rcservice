@@ -1,4 +1,4 @@
-import { logo, gradient, play } from "../../assets";
+import { gradient, play } from "../../assets";
 import ChatBubbleWing from "../../assets/svg/ChatBubbleWing";
 
 export const Gradient = () => {
@@ -17,8 +17,8 @@ export const Gradient = () => {
 
 export const PhotoChatMessage = () => {
   return (
-    <div className="absolute top-8 right-8 max-w-[17.5rem] py-6 px-8 bg-black rounded-xl font-code text-base lg:top-32 lg:right-[10.75rem] lg:max-w-[17.5rem]">
-      ¡Cada semana un nuevo podcast!
+    <div className="absolute top-8 right-8 max-w-[17.5rem] py-6 px-7 bg-black rounded-xl font-code text-base text-center lg:top-24 lg:right-[10.75rem] lg:max-w-[17.5rem] shadow-lg shadow-slate-800 xl:top-20">
+      ¡Cada semana nuevo contenido!
       {/* <ChatBubbleWing className="absolute left-full bottom-0" /> */}
     </div>
   );

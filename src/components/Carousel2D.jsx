@@ -18,7 +18,7 @@ const Carousel2D = () => {
             key={item.id}
             style={{ "--position": item.position }}
           >
-            <img src={item.src} alt={item.title} />
+            <img src={item.src} alt={item.title} loading="lazy" />
           </div>
         ))}
       </div>

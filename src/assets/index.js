@@ -40,6 +40,7 @@ import lenovo from './brand_logos/lenovo.png';
 import acer from './brand_logos/acer.png';
 
 import spotify from './brand_logos/spotify.png';
+import facebookVideos from './brand_logos/RCService_reels.png';
 
 import curve1 from "./collaboration/curve-1.svg"
 import curve2 from "./collaboration/curve-2.svg"
@@ -57,6 +58,8 @@ import lines from './pricing/lines.svg';
 import stars from './pricing/stars.svg';
 
 import carltech from './CarlTech.png';
+import polimed from './polimed.png';
+import arrogante from './ARROGANTE.png';
 
 import yeyo from './yeyo1.png'
 
@@ -107,5 +110,8 @@ export {
     stars,
     lines,
     carltech,
+    polimed,
+    arrogante,
     yeyo,
+    facebookVideos,
 };

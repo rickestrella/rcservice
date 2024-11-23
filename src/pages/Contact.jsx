@@ -6,8 +6,10 @@ const Contact = () => {
   return (
     <Section className="lg:px-32" crosses>
       <div className="lg:w-2/4 lg:mx-auto">
-        <h2 className="text-3xl font-black font-code mb-16">Contacto</h2>
-        <p>
+        <h2 className="text-3xl font-black font-code mb-16 px-4 lg:px-0">
+          Contacto
+        </h2>
+        <p className="px-4 lg:px-0">
           Estamos aqu&iacute; para ayudarte. No dudes en ponerte en contacto con
           nosotros a trav&eacute;s de nuestras redes sociales o nuestro
           formulario de contacto. Estamos comprometidos a responder tus

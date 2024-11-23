@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import AppRoutes from "./AppRoutes";
 import MouseEffect from "./MouseEffect";
+import "./index.css";
 
 const App = () => {
   return (

@@ -12,7 +12,7 @@ const Carousel3D = () => {
             className="item"
             style={{ "--position": item.position }}
           >
-            <img src={item.src} alt={item.title} />
+            <img src={item.src} alt={item.title} loading="lazy" />
           </div>
         ))}
       </div>

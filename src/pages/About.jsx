@@ -5,37 +5,43 @@ import Section from "../components/Section";
 const About = () => {
   return (
     <>
-      <Section className="lg:px-32" crosses>
+      <Section className="px-8 lg:px-32" crosses>
         <div className="lg:w-2/4 lg:mx-auto">
           <h2 className="text-3xl font-black font-code -mt-24 mb-16 text-center">
             Nosotros
           </h2>
           <div className="flex flex-col">
-            <div className="flex flex-row items-center justify-center gap-16">
-              <div className="flex flex-col">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-16">
+              <Link
+                to="mailto:restrella@rcservice.tech"
+                className="flex flex-col hover:scale-105 transition-all duration-150"
+              >
                 <div className="rounded-full border-[4px] border-slate-200/60 overflow-hidden h-[16rem] w-[16rem] bg-[#24203b]/40">
                   <img
                     src=""
                     alt="Ricardo Estrella"
-                    className="object-contain h-full w-full"
+                    className="object-contain h-full w-full text-center"
                   />
                 </div>
                 <p className="font-code text-center text-white text-lg mt-2">
                   Ricardo Estrella
                 </p>
-              </div>
-              <div className="flex flex-col">
+              </Link>
+              <Link
+                to="mailto:cviteri@rcservice.tech"
+                className="flex flex-col hover:scale-105 transition-all duration-150"
+              >
                 <div className="rounded-full border-[4px] border-slate-200/60 overflow-hidden h-[16rem] w-[16rem] bg-[#24203b]/40">
                   <img
                     src={yeyo}
                     alt="Carlos Viteri"
-                    className="object-contain h-full w-full object-bottom"
+                    className="object-contain h-full w-full object-bottom text-center"
                   />
                 </div>
                 <p className="font-code text-center text-white text-lg mt-2">
                   Carlos Viteri
                 </p>
-              </div>
+              </Link>
             </div>
             <p className="text-md mt-16">
               RCService nace de la visi&oacute;n y el esfuerzo conjunto de sus
@@ -48,7 +54,7 @@ const About = () => {
         </div>
       </Section>
 
-      <Section className="lg:px-32" crosses>
+      <Section className="px-8 lg:px-32" crosses>
         <div className="lg:w-2/4 lg:mx-auto">
           <h2 className="text-3xl font-black font-code mb-16">
             Nuestra Historia
@@ -62,7 +68,7 @@ const About = () => {
           </p>
         </div>
       </Section>
-      <Section className="lg:px-32" crosses>
+      <Section className="px-8 lg:px-32" crosses>
         <div className="lg:w-2/4 lg:mx-auto">
           <h2 className="text-3xl font-black font-code mb-16">
             Nuestros Valores
@@ -99,7 +105,7 @@ const About = () => {
           </ul>
         </div>
       </Section>
-      <Section className="lg:px-32" crosses>
+      <Section className="px-8 lg:px-32" crosses>
         <div className="lg:w-2/4 lg:mx-auto">
           <h2 className="text-3xl font-black font-code mb-16">El Equipo</h2>
           <p className="my-8">
@@ -118,7 +124,7 @@ const About = () => {
           </p>
         </div>
       </Section>
-      <Section className="lg:px-32" crosses>
+      <Section className="px-8 lg:px-32" crosses>
         <div className="lg:w-2/4 lg:mx-auto">
           <h2 className="text-3xl font-black font-code mb-16">
             Nuestros Servicios
@@ -146,7 +152,7 @@ const About = () => {
           </p>
         </div>
       </Section>
-      <Section className="lg:px-32" crosses>
+      <Section className="px-8 lg:px-32" crosses>
         <div className="lg:w-2/4 lg:mx-auto">
           <h2 className="text-3xl font-black font-code mb-16">
             Compromiso con la calidad

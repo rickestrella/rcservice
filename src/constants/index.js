@@ -15,6 +15,8 @@ import {
     dell,
     toshiba,
     carltech,
+    polimed,
+    arrogante,
     tiktok,
     lenovo,
     acer,
@@ -34,7 +36,7 @@ export const navigation = [
     {
         id: "1",
         title: "Beneficios",
-        url: "#features",
+        url: "/#features",
     },
     {
         id: "2",
@@ -68,7 +70,28 @@ export const navigation = [
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 
-export const companyLogos = [carltech];
+export const companyLogos = [carltech, polimed, arrogante];
+
+export const affiliates = [
+    {
+        id: 1,
+        name: "Carltech",
+        logo: carltech,
+        url: "https://linktr.ee/CarlTech",
+    },
+    {
+        id: 2,
+        name: "Polimed",
+        logo: polimed,
+        url: "https://www.instagram.com/polimed_ec/",
+    },
+    {
+        id: 3,
+        name: "El Arrogante",
+        logo: arrogante,
+        url: "https://linktr.ee/gymelarrogante",
+    },
+];
 
 export const developerServices = [
     "Creación de páginas web completas",
@@ -360,6 +383,7 @@ export const benefits = [
         title: "Pregunta lo que desees",
         text: "Estamos aquí para guiarte y responder tus dudas antes de que tomes una decisión. Te brindamos una información amplia y te explicamos todo lo que necesites saber para que no tengas dudas sobre nuestros servicios.",
         backgroundUrl: "./src/assets/benefits/circuit_pattern.webp",
+        serviceType: "contact",
         // iconUrl: benefitIcon1,
         // imageUrl: benefitImage2,
     },
@@ -370,6 +394,7 @@ export const benefits = [
         backgroundUrl: "./src/assets/benefits/circuit_pattern.webp",
         // iconUrl: benefitIcon2,
         // imageUrl: benefitImage2,
+        serviceType: "contact",
         light: true,
     },
     {
@@ -377,6 +402,7 @@ export const benefits = [
         title: "Conéctate desde cualquier lugar",
         text: "Accede a nuestros servicios desde cualquier dispositivo, dondequiera que estés, para mayor comodidad y accesibilidad.",
         backgroundUrl: "./src/assets/benefits/circuit_pattern.webp",
+        serviceType: "web",
         // iconUrl: benefitIcon3,
         // imageUrl: benefitImage2,
     },
@@ -385,6 +411,7 @@ export const benefits = [
         title: "Respondemos Rápido",
         text: "A diferencia de muchas compañías, nosotros nos esforzamos por darte el servicio más eficaz y eficiente para que no te quedes esperando una respuesta que jamás llegará.",
         backgroundUrl: "./src/assets/benefits/circuit_pattern.webp",
+        serviceType: "contact",
         // iconUrl: benefitIcon4,
         // imageUrl: benefitImage2,
         light: true,
@@ -394,6 +421,7 @@ export const benefits = [
         title: "Soluciones Tecnológicas Integrales",
         text: "Ofrecemos soporte técnico especializado de tus equipos y desarrollo de aplicaciones web con los frameworks actualizados, asegurando calidad y eficiencia en cada proyecto.",
         backgroundUrl: "./src/assets/benefits/circuit_pattern.webp",
+        serviceType: "tech",
         // iconUrl: benefitIcon2,
         // imageUrl: benefitImage2,
     },
@@ -402,6 +430,7 @@ export const benefits = [
         title: "Protección y Seguridad",
         text: "Nos aseguramos de que todos tus datos y equipos estén protegidos con las mejores prácticas de seguridad para tu tranquilidad.",
         backgroundUrl: "./src/assets/benefits/circuit_pattern.webp",
+        serviceType: "contact",
         // iconUrl: benefitIcon5,
         // imageUrl: benefitImage2,
     },
@@ -443,7 +472,7 @@ export const socials = [
         id: "5",
         title: "Facebook",
         iconUrl: facebook,
-        url: "#",
+        url: "https://www.facebook.com/RCServices.tech/",
     },
 ];
 
