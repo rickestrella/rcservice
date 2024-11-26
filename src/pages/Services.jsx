@@ -7,7 +7,8 @@ const Services = () => {
     <Section className="font-code" crosses>
       <div className="flex flex-col md:flex-row flex-wrap px-12 py-3 gap-4 items-center justify-around">
         <Link
-          to="/web-development"
+          to="https://walink.co/9fe298"
+          target="_blank"
           className="border border-slate-800 px-8 py-3 rounded-md w-2xl lg:w-auto lg:max-w-2xl hover:shadow-lg hover:shadow-slate-900"
         >
           <div className="flex flex-col w-full min-h-5 overflow-hidden">
@@ -26,7 +27,8 @@ const Services = () => {
           </p>
         </Link>
         <Link
-          to="/tech-support"
+          to="https://walink.co/276d5b"
+          target="_blank"
           className="border border-slate-800 px-8 py-3 rounded-md w-2xl lg:w-auto lg:max-w-2xl hover:shadow-lg hover:shadow-slate-900"
         >
           <div className="flex flex-col w-full min-h-5 overflow-hidden">
