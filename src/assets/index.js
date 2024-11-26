@@ -57,9 +57,10 @@ import pricing from './pricing.png';
 import lines from './pricing/lines.svg';
 import stars from './pricing/stars.svg';
 
+import arrogante from './ARROGANTE.png';
+import bakery from './bakery.png';
 import carltech from './CarlTech.png';
 import polimed from './polimed.png';
-import arrogante from './ARROGANTE.png';
 
 import yeyo from './yeyo1.png'
 
@@ -111,6 +112,7 @@ export {
     lines,
     carltech,
     polimed,
+    bakery,
     arrogante,
     yeyo,
     facebookVideos,

@@ -17,6 +17,7 @@ import {
     carltech,
     polimed,
     arrogante,
+    bakery,
     tiktok,
     lenovo,
     acer,
@@ -70,7 +71,7 @@ export const navigation = [
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 
-export const companyLogos = [carltech, polimed, arrogante];
+export const companyLogos = [carltech, polimed, arrogante, bakery];
 
 export const affiliates = [
     {
@@ -90,6 +91,12 @@ export const affiliates = [
         name: "El Arrogante",
         logo: arrogante,
         url: "https://linktr.ee/gymelarrogante",
+    },
+    {
+        id: 4,
+        name: "Rogy's Bakery",
+        logo: bakery,
+        url: "https://rogys-bakery.netlify.app",
     },
 ];
 

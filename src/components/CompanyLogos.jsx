@@ -3,7 +3,6 @@ import { companyLogos, affiliates } from "../constants";
 import { useState } from "react";
 import Modal from "./Modal";
 import { createPortal } from "react-dom";
-import Carousel from "./design/Carousel";
 
 const CompanyLogos = ({ className }) => {
   const [showModal, setShowModal] = useState(false);
@@ -34,9 +33,9 @@ const CompanyLogos = ({ className }) => {
       </div>
       <div className={`${className} -mt-[0px]`}>
         <h5 className="tagline text-center text-n-1/50">Nuestra Red</h5>
-        <Carousel items={affiliates} />
+        {/* <Carousel items={affiliates} /> */}
 
-        {/* <ul className="flex flex-wrap justify-evenly items-center">
+        <ul className="flex flex-wrap justify-evenly items-center">
           {affiliates.map((item) => (
             <li
               className="flex items-center justify-evenly flex-1 h-[8.5rem]"
@@ -77,7 +76,7 @@ const CompanyLogos = ({ className }) => {
               )}
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
       {showModal &&
         createPortal(
