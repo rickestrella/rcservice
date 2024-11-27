@@ -1,14 +1,27 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-const ContinuousMarquee = ({ items, speed = 50 }) => {
-  const marqueeRef = useRef(null);
-  const animationRef = useRef(null);
+interface ItemProps {
+  url?: string;
+  image?: string;
+  logo?: string;
+  alt?: string;
+}
+
+interface MarqueeProps {
+  items: ItemProps[];
+}
+
+const ContinuousMarquee: React.FC<MarqueeProps> = ({ items }) => {
+  const marqueeRef = useRef<HTMLDivElement | null>(null);
+  const animationRef = useRef<number | null>(null);
   let position = 0;
 
   // Función que mueve el marquee
   const moveMarquee = () => {
     const container = marqueeRef.current;
+    if (!container) return; // Verifica que la referencia no sea nula
+
     position -= 1; // Ajusta la velocidad del desplazamiento
     const maxScroll = container.scrollWidth / 2; // Mitad porque hay duplicados
     if (Math.abs(position) >= maxScroll) {
@@ -21,11 +34,15 @@ const ContinuousMarquee = ({ items, speed = 50 }) => {
   // Iniciar la animación
   useEffect(() => {
     animationRef.current = requestAnimationFrame(moveMarquee);
-    return () => cancelAnimationFrame(animationRef.current); // Limpieza al desmontar
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
   }, []);
 
   // Función para detener y reanudar el movimiento
-  const stopMarquee = () => cancelAnimationFrame(animationRef.current);
+  const stopMarquee = () => {
+    if (animationRef.current) cancelAnimationFrame(animationRef.current);
+  };
   const startMarquee = () => {
     animationRef.current = requestAnimationFrame(moveMarquee);
   };

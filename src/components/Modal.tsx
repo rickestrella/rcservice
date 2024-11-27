@@ -1,4 +1,13 @@
-const Modal = ({ onClose, title = "Modal title", body = "Modal content" }) => {
+interface ModalProps {
+  onClose?: () => void;
+  title?: string;
+  body?: string;
+}
+const Modal: React.FC<ModalProps> = ({
+  onClose,
+  title = "Modal title",
+  body = "Modal content",
+}) => {
   return (
     <div className="grid h-screen w-screen overflow-hidden z-50 transition-all bg-black/10 backdrop-blur-sm fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
       <div className="place-self-center rounded bg-slate-950 shadow-lg shadow-blue-800 p-5 max-w-[40ch] border border-slate-800">

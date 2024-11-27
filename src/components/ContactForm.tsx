@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { facebook, instagram } from "../assets";
 
 const ContactForm = () => {
@@ -24,8 +25,7 @@ const ContactForm = () => {
           />
 
           <textarea
-            rows="3"
-            type="text"
+            rows={3}
             placeholder="Mensaje"
             id="message"
             className=" bg-transparent outline-none border-b-2 p-2"
@@ -51,31 +51,31 @@ const ContactForm = () => {
 
             <div className="flex items-center">
               <i className="fas fa-envelope text-xl mr-2"></i>
-              <a
-                href="mailto:info@rcservice.tech"
+              <Link
+                to="mailto:info@rcservice.tech"
                 className="text-lg font-medium text-neutral-300 hover:underline"
               >
                 info@rcservice.tech
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-2">
-              <a
-                href="https://www.facebook.com/RCServices.tech/"
+              <Link
+                to="https://www.facebook.com/RCServices.tech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg font-medium "
               >
                 <img src={facebook} alt="facebook" />
-              </a>
-              <a
-                href="www.instagram.com/rcservice.ec/"
+              </Link>
+              <Link
+                to="www.instagram.com/rcservice.ec/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg font-medium "
               >
                 <img src={instagram} alt="instagram" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

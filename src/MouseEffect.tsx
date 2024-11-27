@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 
 const GridBackground = () => {
-  const circleRef = useRef(null);
+  const circleRef = useRef<HTMLDivElement | null>(null);
   const mousePos = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       mousePos.current = { x: event.clientX, y: event.clientY };
     };
 

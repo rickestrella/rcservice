@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { MutableRefObject, useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
 
 import PlusSvg from "../../assets/svg/PlusSvg";
@@ -35,7 +35,13 @@ const Rings = () => {
   );
 };
 
-export const BackgroundCircles = ({ parallaxRef }) => {
+interface BackgroundCirclesProps {
+  parallaxRef?: MutableRefObject<any>;
+}
+
+export const BackgroundCircles: React.FC<BackgroundCirclesProps> = ({
+  parallaxRef,
+}) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

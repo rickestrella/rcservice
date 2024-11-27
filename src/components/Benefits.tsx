@@ -4,12 +4,35 @@ import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import { Link } from "react-router-dom";
-// import ClipPath from "../assets/svg/ClipPath";
+import React from "react";
 
-function typeOfService(item) {
-  if (item === "web") return "/web-development";
-  if (item === "tech") return "/tech-support";
-  if (item === "contact") return "/contact";
+enum ServiceType {
+  Web = "web",
+  Tech = "tech",
+  Contact = "contact",
+}
+
+interface ItemProps {
+  id?: string;
+  title?: string;
+  text?: string;
+  backgroundUrl?: string;
+  serviceType?: ServiceType;
+  light?: boolean;
+  imageUrl?: string;
+}
+
+function typeOfService(item: ItemProps): string {
+  switch (item.serviceType) {
+    case ServiceType.Web:
+      return "/web-development";
+    case ServiceType.Tech:
+      return "/tech-support";
+    case ServiceType.Contact:
+      return "/contact";
+    default:
+      return "/";
+  }
 }
 
 const Benefits = () => {
@@ -22,9 +45,9 @@ const Benefits = () => {
         />
 
         <div className="flex flex-wrap gap-10 mb-10 justify-evenly">
-          {benefits.map((item) => (
+          {benefits.map((item: ItemProps) => (
             <Link
-              to={typeOfService(item.serviceType)}
+              to={typeOfService(item)}
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
@@ -35,12 +58,6 @@ const Benefits = () => {
                 <h5 className="h5 mb-5">{item.title}</h5>
                 <p className="body-2 mb-6 text-n-3">{item.text}</p>
                 <div className="flex items-center mt-auto">
-                  {/* <img
-                    src={item.iconUrl}
-                    width={48}
-                    height={48}
-                    alt={item.title}
-                  /> */}
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     Saber más
                   </p>
@@ -67,7 +84,6 @@ const Benefits = () => {
                   )}
                 </div>
               </div>
-
               {/* <ClipPath /> */}
             </Link>
           ))}

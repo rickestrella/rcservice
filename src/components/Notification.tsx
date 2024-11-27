@@ -1,7 +1,11 @@
 import { notification1 } from "../assets";
-// import { notificationImages } from "../constants";
 
-const Notification = ({ className, title }) => {
+interface NotificationProps {
+  className?: string;
+  title?: string;
+}
+
+const Notification: React.FC<NotificationProps> = ({ className, title }) => {
   return (
     <div
       className={`${

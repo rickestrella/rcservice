@@ -4,7 +4,11 @@ import { useState } from "react";
 import Modal from "./Modal";
 import { createPortal } from "react-dom";
 
-const CompanyLogos = ({ className }) => {
+interface CompanyLogosProps {
+  className?: string;
+}
+
+const CompanyLogos: React.FC<CompanyLogosProps> = ({ className }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
