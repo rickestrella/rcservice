@@ -14,7 +14,7 @@ This project, **RCService**, is part of our ongoing effort to improve and innova
 
 - **React.js**: A JavaScript library for building user interfaces.
 - **Vite**: A fast and modern development server and build tool that enhances React.js development.
-- **JavaScript/ES6+**: The language used for both client-side logic and interactions.
+- **TypeScript/ES6+**: The language used for both client-side logic and interactions.
 
 ---
 
